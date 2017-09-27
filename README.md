@@ -14,9 +14,9 @@ Based on the amazing work by [LinuxServer.io][linuxserverurl], TheHomeRepot aims
 [![Ivideon](https://github.com/thehomerepot/media/raw/master/ivideon-icon.png)][appurl]
 
 ## Usage
-The first time you setup this docker container you must initialize it. This is done via X11 forwarding. As long as the user you're executing the docker command from has a proper ~/.Xauthority file and you have an X11 server listening, this will work.
+Any time you want to create/modify your server settings, you'll need to run this docker command. Configuration is accomplished via X11 forwarding. As long as the user you're executing the docker command from has a proper ~/.Xauthority file and you have an X11 server listening, this will work.
 
-Initialization
+Initialization/Configuration
 ```
 docker run -it --rm \
 --net=host \
