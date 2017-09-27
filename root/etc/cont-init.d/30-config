@@ -5,3 +5,5 @@ chown -R abc:abc \
 	/app \
 	/archive \
 	/config
+
+chmod +x /app/x11_config.sh
