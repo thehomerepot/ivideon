@@ -12,6 +12,9 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	libgl1-mesa-glx \
+	libxi6 \
+	libfontconfig1 \
+	libxrender1 \
 	sudo \
 	wget && \
 
