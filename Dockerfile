@@ -4,8 +4,8 @@ MAINTAINER Ryan Flagler
 # global environment settings
 ENV IVIDEON_VERSION="3.8.0" \
 DEBIAN_FRONTEND="noninteractive" \
-IVIDEON_REPO="http://packages.ivideon.com/ubuntu/keys/ivideon.list" \
-IVIDEON_KEY="http://packages.ivideon.com/ubuntu/keys/ivideon.key"
+IVIDEON_REPO="https://packages.ivideon.com/ubuntu/keys/ivideon.list" \
+IVIDEON_KEY="https://packages.ivideon.com/ubuntu/keys/ivideon.key"
 
 # install packages
 RUN \
@@ -18,7 +18,7 @@ RUN \
  curl -o \
 	/etc/apt/sources.list.d/ivideon.list -L \
 	"${IVIDEON_REPO}" && \
- wget -O - "${IVIDEON_KEY}" | apt-key add - && \
+ curl -fsSL "${IVIDEON_KEY}" | apt-key add - && \
  apt-get update && \
  apt-get install -y \
 	ivideon-video-server && \
