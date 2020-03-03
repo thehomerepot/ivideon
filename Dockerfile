@@ -2,7 +2,7 @@ FROM lsiobase/xenial
 MAINTAINER Ryan Flagler
 
 # global environment settings
-ENV IVIDEON_VERSION="3.8.0" \
+ENV IVIDEON_VERSION="3.8.3" \
 DEBIAN_FRONTEND="noninteractive" \
 IVIDEON_REPO="https://packages.ivideon.com/ubuntu/keys/ivideon.list" \
 IVIDEON_KEY="https://packages.ivideon.com/ubuntu/keys/ivideon.key"
