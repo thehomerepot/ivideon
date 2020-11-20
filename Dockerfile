@@ -15,10 +15,10 @@ RUN \
 	wget && \
 
 # install ivideon
- curl -o \
+ curl -ko \
 	/etc/apt/sources.list.d/ivideon.list -L \
 	"${IVIDEON_REPO}" && \
- curl -fsSL "${IVIDEON_KEY}" | apt-key add - && \
+ curl -kfsSL "${IVIDEON_KEY}" | apt-key add - && \
  apt-get update && \
  apt-get install -y \
 	ivideon-video-server && \
