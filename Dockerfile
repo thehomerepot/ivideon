@@ -15,6 +15,10 @@ RUN \
 	sudo \
 	libqt5gui5 \
 	libqt5core5a \
+	gcc-7-base \
+	libfacesdk \
+	libfacesdk-data \
+	libstdc++6 \
 	wget && \
 
 # install ivideon
@@ -24,7 +28,9 @@ RUN \
  curl -kfsSL "${IVIDEON_KEY}" | apt-key add - && \
  apt-get update && \
  apt-get install -y \
-	ivideon-video-server && \
+	ivideon-video-server \
+	ivideon-server-faces-tv-module && \
+ apt-get upgrade && \
 	
 # cleanup
  apt-get clean && \
