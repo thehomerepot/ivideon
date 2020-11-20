@@ -2,4 +2,4 @@
 
 exec \
         s6-setuidgid abc /bin/bash -c \
-        '/opt/ivideon/ivideon-server/initd.sh start'
+        '/etc/init.d/videoserver start'
