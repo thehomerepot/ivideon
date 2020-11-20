@@ -2,7 +2,7 @@ FROM lsiobase/xenial
 MAINTAINER Ryan Flagler
 
 # global environment settings
-ENV IVIDEON_VERSION="3.8.0" \
+ENV IVIDEON_VERSION="3.9.0" \
 DEBIAN_FRONTEND="noninteractive" \
 IVIDEON_REPO="https://packages.ivideon.com/ubuntu/keys/ivideon.list" \
 IVIDEON_KEY="https://packages.ivideon.com/ubuntu/keys/ivideon.key"
@@ -12,13 +12,16 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	libgl1-mesa-glx \
+	sudo \
+	libqt5gui5 \
+	libqt5core5a \
 	wget && \
 
 # install ivideon
- curl -o \
+ curl -ko \
 	/etc/apt/sources.list.d/ivideon.list -L \
 	"${IVIDEON_REPO}" && \
- curl -fsSL "${IVIDEON_KEY}" | apt-key add - && \
+ curl -kfsSL "${IVIDEON_KEY}" | apt-key add - && \
  apt-get update && \
  apt-get install -y \
 	ivideon-video-server && \
