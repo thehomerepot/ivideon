@@ -15,9 +15,6 @@ RUN \
 	sudo \
 	libqt5gui5 \
 	libqt5core5a \
-	gcc-7-base \
-	libfacesdk \
-	libfacesdk-data \
 	libstdc++6 \
 	wget && \
 
@@ -29,7 +26,10 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	ivideon-video-server \
-	ivideon-server-faces-tv-module && \
+	ivideon-server-faces-tv-module \
+	gcc-7-base \
+	libfacesdk \
+	libfacesdk-data && \
  apt-get upgrade && \
 	
 # cleanup
