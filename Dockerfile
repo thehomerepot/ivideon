@@ -30,7 +30,7 @@ RUN \
 	gcc-7-base \
 	libfacesdk \
 	libfacesdk-data && \
- apt-get upgrade && \
+ apt-get upgrade -y && \
 	
 # cleanup
  apt-get clean && \
